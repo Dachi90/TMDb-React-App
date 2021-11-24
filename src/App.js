@@ -4,7 +4,7 @@ import Card from "./components/Card";
 const App = () => {
   const [movies, setMovies] = useState([]);
 
-  const TRENDING_URL = "https://api.themoviedb.org/3/trending/all/week?api_key=73b7f93676cf548e83b720fd7de7b73b";
+  const TRENDING_URL = "https://api.themoviedb.org/3/trending/all/week?api_key=73b7f93676cf548e83b720fd7de7b73b&language=es-ES";
 
   const apiFetch = (url) => {
     fetch(url)
@@ -23,7 +23,7 @@ const App = () => {
     <div className="appDiv">
       <header className="header">
         <div className="logoTitulo">
-          <img src="" alt="" />
+          <img src="" alt="logo" className="logo" />
           <span>título</span>
         </div>
         <form className="form">

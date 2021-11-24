@@ -15,7 +15,7 @@ img {
   padding: 0.5rem 1rem;
 }
 
-/* Header */
+/* --- Header --- */
 
 .form {
   width: 40%;
@@ -31,12 +31,32 @@ img {
 }
 
 .logoTitulo {
+  display: flex;
+  justify-content: space-between;
 }
 
-/* Main Content */
+/* --- Main Content --- */
 
 .mainContent {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
   margin-top: 1rem;
+}
+
+/* --- Card --- */
+
+.card {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.movieDetails {
+  padding: 0.3rem;
+  flex: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

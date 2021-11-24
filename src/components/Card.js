@@ -4,9 +4,9 @@ const Card = ({ data }) => {
   return (
     <div className="card">
       <img src={POSTER_PATH + data.poster_path} alt="portada" />
-      <div class="movieDetails">
-        <p></p>
-        <p></p>
+      <div className="movieDetails">
+        <p>{data.title ? data.title : data.name}</p>
+        <p>{data.vote_average}</p>
       </div>
     </div>
   );
