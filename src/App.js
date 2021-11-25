@@ -41,7 +41,9 @@ const App = () => {
         </div>
         <form className="form" onSubmit={handleSubmit}>
           <input type="search" name="search" id="search" className="inputForm" />
-          <button type="submit">Buscar</button>
+          <button type="submit" className="buttonSearch">
+            🔍
+          </button>
         </form>
       </header>
       <main className="mainContent">

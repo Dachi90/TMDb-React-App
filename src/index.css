@@ -16,10 +16,16 @@ img {
 }
 
 /* --- Header --- */
+.buttonSearch {
+  background-color: #4d99ac;
+  border-radius: 5px;
+}
 
 .form {
   width: 30%;
   min-width: 100px;
+  display: flex;
+  align-items: center;
 }
 
 .header {
@@ -29,10 +35,11 @@ img {
 }
 
 .inputForm {
-  width: 100%;
+  width: 85%;
+  margin-right: 10px;
   padding: 0.2rem;
   border-radius: 5px;
-  border: 2px #08718b solid;
+  border: 2px #4d99ac solid;
   outline: none;
 }
 
