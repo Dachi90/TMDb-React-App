@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Card from "./components/Card";
+import logo from "./assets/logo.svg";
 
 const App = () => {
   const [movies, setMovies] = useState([]);
@@ -22,9 +23,8 @@ const App = () => {
   return (
     <div className="appDiv">
       <header className="header">
-        <div className="logoTitulo">
-          <img src="" alt="logo" className="logo" />
-          <span>título</span>
+        <div className="logoContainer">
+          <img src={logo} alt="logo" className="logo" />
         </div>
         <form className="form">
           <input type="search" name="search" id="search" className="inputForm" />

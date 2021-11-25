@@ -18,21 +18,27 @@ img {
 /* --- Header --- */
 
 .form {
-  width: 40%;
+  width: 30%;
+  min-width: 100px;
 }
 
 .header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .inputForm {
   width: 100%;
+  padding: 0.2rem;
+  border-radius: 5px;
+  border: 2px #08718b solid;
+  outline: none;
 }
 
-.logoTitulo {
-  display: flex;
-  justify-content: space-between;
+.logoContainer {
+  width: 25%;
+  min-width: 100px;
 }
 
 /* --- Main Content --- */
