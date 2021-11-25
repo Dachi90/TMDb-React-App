@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Card from "./components/Card";
-import logo from "./assets/logo.svg";
+import Header from "./components/Header";
+/* import logo from "./assets/logo.svg"; */
 
 const App = () => {
   const [movies, setMovies] = useState([]);
@@ -35,7 +36,7 @@ const App = () => {
 
   return (
     <div className="appDiv">
-      <header className="header">
+      {/* <header className="header">
         <div className="logoContainer">
           <img src={logo} alt="logo" className="logo" />
         </div>
@@ -45,7 +46,8 @@ const App = () => {
             🔍
           </button>
         </form>
-      </header>
+      </header> */}
+      <Header handleSubmit={handleSubmit} />
       <main className="mainContent">
         {movies.map((movie) => (
           <Card key={movie.id} data={movie} />
