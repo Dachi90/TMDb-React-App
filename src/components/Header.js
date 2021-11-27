@@ -1,9 +1,9 @@
 import logo from "../assets/logo.svg";
 
-const Header = ({ handleSubmit }) => {
+const Header = ({ handleSubmit, goHome }) => {
   return (
     <header className="header">
-      <div className="logoContainer">
+      <div className="logoContainer" onClick={goHome}>
         <img src={logo} alt="logo" className="logo" />
       </div>
       <form className="form" onSubmit={handleSubmit}>

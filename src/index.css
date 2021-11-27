@@ -60,6 +60,7 @@ img {
 .logoContainer {
   width: 25%;
   min-width: 100px;
+  cursor: pointer;
 }
 
 /* --- Main Content --- */
@@ -117,4 +118,6 @@ img {
   right: 5rem;
   bottom: 5rem;
   background-color: #f3f3f3;
+  color: black;
+  border-radius: 5px;
 }
