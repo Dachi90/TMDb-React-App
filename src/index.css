@@ -95,8 +95,26 @@ img {
   justify-content: space-between;
   align-items: center;
   background-color: #7f8084;
+  font-weight: bold;
 }
 
 .poster {
   height: 450px;
+}
+
+.voteAverage {
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 0.2rem;
+}
+
+/* --- Modal Movie --- */
+
+.modalMovie {
+  position: absolute;
+  top: 5rem;
+  left: 5rem;
+  right: 5rem;
+  bottom: 5rem;
+  background-color: #f3f3f3;
 }
