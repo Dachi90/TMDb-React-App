@@ -111,13 +111,36 @@ img {
 
 /* --- Modal Movie --- */
 
+.modalCloseButton {
+  display: flex;
+  align-self: flex-end;
+  width: fit-content;
+  padding: 0.5rem;
+  border: 1px solid black;
+  margin: 0.2rem;
+  cursor: pointer;
+}
+
+.modalImg {
+  display: flex;
+  align-items: center;
+}
+
+.modalInfoContainer {
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
 .modalMovie {
   position: absolute;
   top: 5rem;
   left: 5rem;
   right: 5rem;
   bottom: 5rem;
-  background-color: #f3f3f3;
+  background: rgba(0, 0, 0, 0.8);
   color: black;
   border-radius: 5px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
