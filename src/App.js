@@ -46,6 +46,11 @@ const App = () => {
     setModalActive(true);
   };
 
+  const closeModal = () => {
+    setMovieSlectedId("");
+    setModalActive(false);
+  };
+
   return (
     <div className="appDiv">
       <Header handleSubmit={handleSubmit} goHome={goHome} />
@@ -53,8 +58,8 @@ const App = () => {
         {movies.map((movie) => (
           <Card key={movie.id} data={movie} handleClick={handleClick} />
         ))}
-        {modalActive && <ModalMovie movieSelectedId={movieSelectedId} />}
       </main>
+      {modalActive && <ModalMovie movieSelectedId={movieSelectedId} closeModal={closeModal} />}
     </div>
   );
 };

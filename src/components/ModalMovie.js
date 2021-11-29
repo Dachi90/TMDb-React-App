@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import image from "../assets/image-not-found.png";
 
-const ModalMovie = ({ movieSelectedId }) => {
+const ModalMovie = ({ movieSelectedId, closeModal }) => {
   const [movieSelectedInfo, setMovieSelectedInfo] = useState({});
 
   const POSTER_PATH = "https://image.tmdb.org/t/p/w500";
@@ -19,16 +19,26 @@ const ModalMovie = ({ movieSelectedId }) => {
   */
 
   return (
-    <div className="modalMovie">
-      <div className="modalImg">
-        <img src={movieSelectedInfo.poster_path ? POSTER_PATH + movieSelectedInfo.poster_path : image} alt="película" />
-      </div>
-      <div className="modalInfoContainer">
-        <div className="modalCloseButton">X</div>
-        <div className="modalInfo">
-          <p>Título: {movieSelectedInfo.title}</p>
-          <p>Estreno: {movieSelectedInfo.release_date}</p>
-          <p>Sinopsis: {movieSelectedInfo.overview}</p>
+    <div className="modalContainer">
+      <div className="modalMovie">
+        <div className="modalImg">
+          <img src={movieSelectedInfo.poster_path ? POSTER_PATH + movieSelectedInfo.poster_path : image} alt="película" />
+        </div>
+        <div className="modalInfoContainer">
+          <div className="modalCloseButton" onClick={closeModal}>
+            X
+          </div>
+          <div className="modalInfo">
+            <p className="pInfo">
+              <span>Título</span>: {movieSelectedInfo.title}
+            </p>
+            <p className="pInfo">
+              <span>Estreno</span>: {movieSelectedInfo.release_date}
+            </p>
+            <p className="pInfo">
+              <span>Sinopsis</span>: {movieSelectedInfo.overview}
+            </p>
+          </div>
         </div>
       </div>
     </div>

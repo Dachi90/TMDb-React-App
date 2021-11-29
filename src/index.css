@@ -112,35 +112,60 @@ img {
 /* --- Modal Movie --- */
 
 .modalCloseButton {
-  display: flex;
   align-self: flex-end;
-  width: fit-content;
-  padding: 0.5rem;
-  border: 1px solid black;
+  padding: 0.2rem;
   margin: 0.2rem;
   cursor: pointer;
 }
 
+.modalContainer {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
 .modalImg {
   display: flex;
+  justify-content: center;
   align-items: center;
+}
+.modalImg img {
+  max-height: 700px;
+}
+
+.modalInfo {
+  flex: 2 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .modalInfoContainer {
   display: flex;
   flex-direction: column;
-  color: white;
 }
 
 .modalMovie {
-  position: absolute;
-  top: 5rem;
-  left: 5rem;
-  right: 5rem;
-  bottom: 5rem;
-  background: rgba(0, 0, 0, 0.8);
-  color: black;
-  border-radius: 5px;
+  width: 80%;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  border: 2px solid white;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 1);
+}
+
+.pInfo {
+  margin: 0.5rem;
+}
+
+.pInfo span {
+  font-weight: bold;
+  text-decoration: underline;
 }
