@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import ButtonsPage from "./components/ButtonsPage";
 import Card from "./components/Card";
 import Header from "./components/Header";
 import ModalMovie from "./components/ModalMovie";
@@ -7,8 +8,9 @@ const App = () => {
   const [movies, setMovies] = useState([]);
   const [modalActive, setModalActive] = useState(false);
   const [movieSelectedId, setMovieSlectedId] = useState("");
+  const [pageNumber, setPageNumber] = useState(1);
 
-  const TRENDING_URL = "https://api.themoviedb.org/3/trending/movie/week?api_key=73b7f93676cf548e83b720fd7de7b73b&language=es-ES";
+  let TRENDING_URL = `https://api.themoviedb.org/3/trending/movie/week?api_key=73b7f93676cf548e83b720fd7de7b73b&language=es-ES&page=${pageNumber}`;
   const SEARCH_URL = "https://api.themoviedb.org/3/search/movie?api_key=73b7f93676cf548e83b720fd7de7b73b&language=es-ES&query=";
 
   const apiFetch = (url) => {
@@ -22,7 +24,7 @@ const App = () => {
 
   useEffect(() => {
     apiFetch(TRENDING_URL);
-  }, []);
+  }, [TRENDING_URL]);
 
   const goHome = () => {
     apiFetch(TRENDING_URL);
@@ -60,6 +62,7 @@ const App = () => {
         ))}
       </main>
       {modalActive && <ModalMovie movieSelectedId={movieSelectedId} closeModal={closeModal} />}
+      <ButtonsPage pageNumber={pageNumber} setPageNumber={setPageNumber} />
     </div>
   );
 };
