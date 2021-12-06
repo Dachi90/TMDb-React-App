@@ -26,7 +26,7 @@ const ModalMovie = ({ movieSelectedId, closeModal }) => {
         </div>
         <div className="modalInfoContainer">
           <div className="modalCloseButton" onClick={closeModal}>
-            X
+            <i className="far fa-window-close"></i>
           </div>
           <div className="modalInfo">
             <p className="pInfo">

@@ -115,6 +115,10 @@ img {
 
 /* --- Modal Movie --- */
 
+.fa-window-close {
+  font-size: 2rem;
+}
+
 .modalCloseButton {
   align-self: flex-end;
   padding: 0.2rem;

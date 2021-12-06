@@ -9,7 +9,7 @@ const Header = ({ handleSubmit, goHome }) => {
       <form className="form" onSubmit={handleSubmit}>
         <input type="search" name="search" id="search" className="inputForm" />
         <button type="submit" className="buttonSearch">
-          🔍
+          <i className="fas fa-search"></i>
         </button>
       </form>
     </header>

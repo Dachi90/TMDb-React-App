@@ -2,7 +2,7 @@ import React from "react";
 
 const ButtonsPage = ({ pageNumber, setPageNumber }) => {
   const handleClickBack = () => {
-    if (pageNumber != 1) {
+    if (pageNumber !== 1) {
       setPageNumber(pageNumber - 1);
     } else {
       return;
